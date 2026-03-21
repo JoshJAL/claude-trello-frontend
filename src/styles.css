@@ -1,35 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-
-  --color-ink: #0f1a1c;
-  --color-ink-soft: #3c595d;
-  --color-lagoon: #3a7a85;
-  --color-lagoon-light: #4a9aa7;
-  --color-sand: #f4f8f9;
-  --color-foam: #e0eaeb;
-  --color-shore: #c1d4d7;
-  --color-surface: rgba(255, 255, 255, 0.82);
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
 }
 
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+/* ── Light mode ──────────────────────────────────────────────────── */
+:root {
+  --sea-ink: #141e1f;
+  --sea-ink-soft: #3c595d;
+  --lagoon: #50767c;
+  --lagoon-deep: #3c595d;
+  --lagoon-light: #63949c;
+  --sand: #eff4f5;
+  --foam: #e0eaeb;
+  --shore-line: #c1d4d7;
+  --surface: rgba(255, 255, 255, 0.74);
+  --surface-strong: rgba(255, 255, 255, 0.9);
+  --line: rgba(20, 30, 31, 0.14);
+  --inset-glint: rgba(255, 255, 255, 0.82);
+  --kicker: #50767c;
+  --header-bg: rgba(239, 244, 245, 0.86);
+  --chip-bg: rgba(255, 255, 255, 0.8);
+  --chip-line: rgba(80, 118, 124, 0.2);
+  --code-bg: #141e1f;
+  --code-text: #e0eaeb;
+  --card-bg: rgba(255, 255, 255, 0.7);
 }
 
+/* ── Dark mode (explicit) ────────────────────────────────────────── */
+:root[data-theme="dark"] {
+  --sea-ink: #e0eaeb;
+  --sea-ink-soft: #a2bfc3;
+  --lagoon: #83a9af;
+  --lagoon-deep: #a2bfc3;
+  --lagoon-light: #93b9bf;
+  --sand: #0e1516;
+  --foam: #141e1f;
+  --shore-line: #283b3e;
+  --surface: rgba(14, 21, 22, 0.8);
+  --surface-strong: rgba(14, 21, 22, 0.92);
+  --line: rgba(162, 191, 195, 0.16);
+  --inset-glint: rgba(162, 191, 195, 0.1);
+  --kicker: #83a9af;
+  --header-bg: rgba(14, 21, 22, 0.86);
+  --chip-bg: rgba(20, 30, 31, 0.9);
+  --chip-line: rgba(131, 169, 175, 0.2);
+  --code-bg: #0a1011;
+  --code-text: #c1d4d7;
+  --card-bg: rgba(20, 30, 31, 0.6);
+}
+
+/* ── Dark mode (system preference) ───────────────────────────────── */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --sea-ink: #e0eaeb;
+    --sea-ink-soft: #a2bfc3;
+    --lagoon: #83a9af;
+    --lagoon-deep: #a2bfc3;
+    --lagoon-light: #93b9bf;
+    --sand: #0e1516;
+    --foam: #141e1f;
+    --shore-line: #283b3e;
+    --surface: rgba(14, 21, 22, 0.8);
+    --surface-strong: rgba(14, 21, 22, 0.92);
+    --line: rgba(162, 191, 195, 0.16);
+    --inset-glint: rgba(162, 191, 195, 0.1);
+    --kicker: #83a9af;
+    --header-bg: rgba(14, 21, 22, 0.86);
+    --chip-bg: rgba(20, 30, 31, 0.9);
+    --chip-line: rgba(131, 169, 175, 0.2);
+    --code-bg: #0a1011;
+    --code-text: #c1d4d7;
+    --card-bg: rgba(20, 30, 31, 0.6);
+  }
+}
+
+/* ── Base ─────────────────────────────────────────────────────────── */
 html {
   scroll-behavior: smooth;
 }
 
 body {
+  margin: 0;
+  color: var(--sea-ink);
+  font-family: var(--font-sans);
+  background-color: var(--sand);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 ::selection {
-  background: rgba(58, 122, 133, 0.2);
+  background: rgba(80, 118, 124, 0.2);
+}
+
+/* ── Cards ────────────────────────────────────────────────────────── */
+.card {
+  border: 1px solid var(--line);
+  background: linear-gradient(165deg, var(--surface-strong), var(--surface));
+  box-shadow:
+    0 1px 0 var(--inset-glint) inset,
+    0 22px 44px rgba(14, 21, 22, 0.07),
+    0 6px 18px rgba(14, 21, 22, 0.05);
+  backdrop-filter: blur(4px);
+}
+
+/* ── Transitions ──────────────────────────────────────────────────── */
+button,
+a {
+  transition: background-color 180ms ease, color 180ms ease,
+    border-color 180ms ease, transform 180ms ease, opacity 180ms ease;
 }

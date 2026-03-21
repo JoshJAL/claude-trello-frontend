@@ -34,7 +34,7 @@ function Code({
 
   return (
     <div className="group relative">
-      <pre className="overflow-x-auto rounded-xl border border-white/10 bg-ink p-4 text-sm leading-relaxed text-white/80">
+      <pre className="overflow-x-auto rounded-xl border border-[var(--line)] bg-[var(--code-bg)] p-5 text-sm leading-relaxed text-[var(--code-text)]">
         <code>{children}</code>
       </pre>
       {text && <CopyButton text={text} />}
@@ -52,19 +52,21 @@ function CommandCard({
   flags?: Array<{ flag: string; desc: string }>;
 }) {
   return (
-    <div className="rounded-xl border border-shore/50 bg-white/70 p-4">
+    <div className="card rounded-xl p-5">
       <div className="flex flex-wrap items-baseline gap-3">
-        <code className="rounded-md bg-ink px-2.5 py-1 text-sm font-semibold text-sand">
+        <code className="rounded-md bg-[var(--code-bg)] px-2.5 py-1 text-sm font-semibold text-[var(--code-text)]">
           {command}
         </code>
-        <span className="text-sm text-ink-soft">{description}</span>
+        <span className="text-sm text-[var(--sea-ink-soft)]">
+          {description}
+        </span>
       </div>
       {flags && flags.length > 0 && (
-        <div className="mt-3 space-y-1.5 border-t border-shore/30 pt-3">
+        <div className="mt-4 space-y-2 border-t border-[var(--line)] pt-4">
           {flags.map((f) => (
             <div key={f.flag} className="flex items-baseline gap-2 text-sm">
-              <code className="shrink-0 text-lagoon">{f.flag}</code>
-              <span className="text-ink-soft">{f.desc}</span>
+              <code className="shrink-0 text-[var(--lagoon)]">{f.flag}</code>
+              <span className="text-[var(--sea-ink-soft)]">{f.desc}</span>
             </div>
           ))}
         </div>
@@ -75,18 +77,18 @@ function CommandCard({
 
 export function CliDocs() {
   return (
-    <section id="cli" className="px-6 py-24 sm:py-32">
+    <section id="cli" className="px-6 py-28 sm:py-36">
       <div className="mx-auto max-w-3xl">
-        <div className="mb-12 text-center">
-          <p className="mb-2 text-sm font-bold uppercase tracking-widest text-lagoon">
+        <div className="mb-16 text-center">
+          <p className="mb-3 text-xs font-bold uppercase tracking-[0.16em] text-[var(--kicker)]">
             CLI Tool
           </p>
-          <h2 className="mb-4 text-3xl font-extrabold text-ink sm:text-4xl">
+          <h2 className="mb-4 text-3xl font-extrabold text-[var(--sea-ink)] sm:text-4xl">
             Work entirely from your terminal
           </h2>
-          <p className="text-lg text-ink-soft">
+          <p className="text-lg text-[var(--sea-ink-soft)]">
             No install needed. Runs instantly with{" "}
-            <code className="rounded bg-foam px-1.5 py-0.5 text-sm font-semibold">
+            <code className="rounded-md border border-[var(--line)] bg-[var(--surface)] px-2 py-0.5 text-sm font-semibold text-[var(--sea-ink)]">
               npx
             </code>
             .
@@ -95,7 +97,7 @@ export function CliDocs() {
             href="https://www.npmjs.com/package/claude-trello-cli"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-4 inline-flex items-center gap-1.5 rounded-lg border border-shore bg-white/60 px-3 py-1.5 text-sm font-semibold text-ink transition hover:bg-foam"
+            className="mt-5 inline-flex items-center gap-1.5 rounded-lg border border-[var(--line)] bg-[var(--surface)] px-4 py-2 text-sm font-semibold text-[var(--sea-ink)] no-underline hover:bg-[var(--foam)]"
           >
             View on npm
             <ExternalLink size={14} />
@@ -103,12 +105,13 @@ export function CliDocs() {
         </div>
 
         {/* Quick start */}
-        <div className="mb-12">
-          <h3 className="mb-4 text-xl font-bold text-ink">Quick Start</h3>
-          <Code copyText="npx claude-trello-cli register
-npx claude-trello-cli setup
-cd ~/my-project
-npx claude-trello-cli run">{`# Create an account (or "login" if you have one)
+        <div className="mb-14">
+          <h3 className="mb-5 text-xl font-bold text-[var(--sea-ink)]">
+            Quick Start
+          </h3>
+          <Code
+            copyText={`npx claude-trello-cli register\nnpx claude-trello-cli setup\ncd ~/my-project\nnpx claude-trello-cli run`}
+          >{`# Create an account (or "login" if you have one)
 npx claude-trello-cli register
 
 # Connect Trello + save your Anthropic API key
@@ -117,18 +120,20 @@ npx claude-trello-cli setup
 # Navigate to your project and go
 cd ~/my-project
 npx claude-trello-cli run`}</Code>
-          <p className="mt-3 text-sm text-ink-soft">
+          <p className="mt-4 text-sm text-[var(--sea-ink-soft)]">
             Or install globally for a shorter command:{" "}
-            <code className="rounded bg-foam px-1.5 py-0.5 text-xs">
+            <code className="rounded-md border border-[var(--line)] bg-[var(--surface)] px-1.5 py-0.5 text-xs text-[var(--sea-ink)]">
               npm i -g claude-trello-cli
             </code>
           </p>
         </div>
 
         {/* Commands */}
-        <div className="mb-12">
-          <h3 className="mb-4 text-xl font-bold text-ink">Commands</h3>
-          <div className="space-y-3">
+        <div className="mb-14">
+          <h3 className="mb-5 text-xl font-bold text-[var(--sea-ink)]">
+            Commands
+          </h3>
+          <div className="space-y-4">
             <CommandCard
               command="register"
               description="Create a new account"
@@ -183,9 +188,9 @@ npx claude-trello-cli run`}</Code>
           </div>
         </div>
 
-        {/* Example with message */}
+        {/* Example */}
         <div>
-          <h3 className="mb-4 text-xl font-bold text-ink">
+          <h3 className="mb-5 text-xl font-bold text-[var(--sea-ink)]">
             Give Claude extra context
           </h3>
           <Code

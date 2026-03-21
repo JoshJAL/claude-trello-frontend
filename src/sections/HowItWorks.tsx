@@ -1,9 +1,4 @@
-import {
-  UserPlus,
-  LayoutList,
-  Cpu,
-  CheckCircle2,
-} from "lucide-react";
+import { UserPlus, LayoutList, Cpu, CheckCircle2 } from "lucide-react";
 
 const steps = [
   {
@@ -34,28 +29,30 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <section id="how-it-works" className="px-6 py-24 sm:py-32">
+    <section id="how-it-works" className="px-6 py-28 sm:py-36">
       <div className="mx-auto max-w-5xl">
-        <div className="mb-16 text-center">
-          <p className="mb-2 text-sm font-bold uppercase tracking-widest text-lagoon">
+        <div className="mb-20 text-center">
+          <p className="mb-3 text-xs font-bold uppercase tracking-[0.16em] text-[var(--kicker)]">
             How It Works
           </p>
-          <h2 className="text-3xl font-extrabold text-ink sm:text-4xl">
+          <h2 className="text-3xl font-extrabold text-[var(--sea-ink)] sm:text-4xl">
             Four steps, then Claude takes over
           </h2>
         </div>
 
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
           {steps.map((step, i) => (
             <div key={step.title} className="text-center">
-              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-lagoon/10 text-lagoon">
+              <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-[var(--lagoon)]/10 text-[var(--lagoon)]">
                 <step.icon size={26} />
               </div>
-              <div className="mb-2 text-xs font-bold text-lagoon">
+              <div className="mb-2 text-xs font-bold text-[var(--kicker)]">
                 Step {i + 1}
               </div>
-              <h3 className="mb-2 text-lg font-bold text-ink">{step.title}</h3>
-              <p className="text-sm leading-relaxed text-ink-soft">
+              <h3 className="mb-3 text-lg font-bold text-[var(--sea-ink)]">
+                {step.title}
+              </h3>
+              <p className="text-sm leading-relaxed text-[var(--sea-ink-soft)]">
                 {step.description}
               </p>
             </div>

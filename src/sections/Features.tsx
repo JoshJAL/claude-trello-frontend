@@ -50,31 +50,31 @@ export function Features() {
   return (
     <section
       id="features"
-      className="border-y border-shore/40 bg-gradient-to-b from-foam/50 to-sand px-6 py-24 sm:py-32"
+      className="border-y border-[var(--line)] bg-[var(--foam)]/50 px-6 py-28 sm:py-36"
     >
       <div className="mx-auto max-w-5xl">
-        <div className="mb-16 text-center">
-          <p className="mb-2 text-sm font-bold uppercase tracking-widest text-lagoon">
+        <div className="mb-20 text-center">
+          <p className="mb-3 text-xs font-bold uppercase tracking-[0.16em] text-[var(--kicker)]">
             Features
           </p>
-          <h2 className="text-3xl font-extrabold text-ink sm:text-4xl">
+          <h2 className="text-3xl font-extrabold text-[var(--sea-ink)] sm:text-4xl">
             Everything you need, nothing you don't
           </h2>
         </div>
 
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((feature) => (
             <div
               key={feature.title}
-              className="rounded-2xl border border-shore/50 bg-white/70 p-6 backdrop-blur-sm transition hover:shadow-lg hover:shadow-lagoon/5"
+              className="card rounded-2xl p-6 transition hover:shadow-lg"
             >
-              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-lagoon/10 text-lagoon">
+              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-[var(--lagoon)]/10 text-[var(--lagoon)]">
                 <feature.icon size={20} />
               </div>
-              <h3 className="mb-2 text-base font-bold text-ink">
+              <h3 className="mb-2 text-base font-bold text-[var(--sea-ink)]">
                 {feature.title}
               </h3>
-              <p className="text-sm leading-relaxed text-ink-soft">
+              <p className="text-sm leading-relaxed text-[var(--sea-ink-soft)]">
                 {feature.description}
               </p>
             </div>
