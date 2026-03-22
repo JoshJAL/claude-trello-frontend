@@ -5,25 +5,25 @@ const steps = [
     icon: UserPlus,
     title: "Sign up and connect",
     description:
-      "Create an account, connect your Trello, and add your Anthropic API key. Takes about two minutes.",
+      "Create an account, connect a task source (Trello, GitHub, or GitLab) and add an AI provider key. Takes about two minutes.",
   },
   {
     icon: LayoutList,
     title: "Pick a board",
     description:
-      "Select one of your Trello boards. The app shows all cards and their checklist items.",
+      "Select a board, repo, or project. The app shows all cards and their checklist items.",
   },
   {
     icon: Cpu,
-    title: "Claude gets to work",
+    title: "Your AI agent gets to work",
     description:
-      "Claude Code launches in your project directory, reads each card, and starts making the code changes.",
+      "The AI agent launches in your project directory, reads each task, and starts making the code changes.",
   },
   {
     icon: CheckCircle2,
     title: "Items get checked off",
     description:
-      "As Claude completes each task, it marks the checklist item done on Trello. Finished cards move to Done.",
+      "As the agent completes each task, it marks items done on your task board. Finished cards move to Done.",
   },
 ];
 
@@ -36,7 +36,7 @@ export function HowItWorks() {
             How It Works
           </p>
           <h2 className="text-3xl font-extrabold text-[var(--sea-ink)] sm:text-4xl">
-            Four steps, then Claude takes over
+            Four steps, then your agent takes over
           </h2>
         </div>
 

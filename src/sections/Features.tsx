@@ -18,13 +18,13 @@ const features = [
     icon: Zap,
     title: "Fully Automated",
     description:
-      "Claude reads cards, makes code changes, checks off items, and moves cards to Done. You watch it happen.",
+      "The agent reads your tasks, makes code changes, checks off items, and moves tasks to Done. You watch it happen.",
   },
   {
     icon: ShieldCheck,
     title: "Your Keys, Encrypted",
     description:
-      "Your Anthropic API key is encrypted at rest with AES-256-GCM. It's only decrypted for the duration of a session.",
+      "Your API keys are encrypted at rest with AES-256-GCM. They're only decrypted for the duration of a session.",
   },
   {
     icon: Globe,
@@ -36,13 +36,13 @@ const features = [
     icon: GitBranch,
     title: "Works on Any Codebase",
     description:
-      "Point Claude at any local directory. It has full read/write access to your files during a session.",
+      "Point the agent at any local directory. It has full read/write access to your files during a session.",
   },
   {
     icon: MessageCircle,
-    title: "Give Claude Context",
+    title: "Give Your Agent Context",
     description:
-      'Send initial instructions like "check the dev branch for comparison" or "focus on backend cards first".',
+      'Send initial instructions like "check the dev branch for comparison" or "focus on backend tasks first".',
   },
 ];
 
