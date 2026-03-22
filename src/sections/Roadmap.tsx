@@ -21,25 +21,25 @@ const ROADMAP: RoadmapCategory[] = [
         title: "Privacy Policy",
         description:
           "A clear privacy policy explaining what data we collect, how it's stored, and how it's used.",
-        status: "planned",
+        status: "done",
       },
       {
         title: "Terms of Service",
         description:
           "User agreement covering acceptable use, liability, and service terms.",
-        status: "planned",
+        status: "done",
       },
       {
         title: "Cookie Policy & Consent Banner",
         description:
           "Documentation of cookies used (session auth, preferences) and a GDPR-compliant consent popup.",
-        status: "planned",
+        status: "done",
       },
       {
         title: "Data Collection Explainer",
         description:
           "User-facing page explaining exactly what we collect, why, and how long it's retained.",
-        status: "planned",
+        status: "done",
       },
     ],
   },
@@ -50,7 +50,7 @@ const ROADMAP: RoadmapCategory[] = [
         title: "Feature Request Form",
         description:
           "In-app form for users to submit feature ideas and vote on existing requests.",
-        status: "planned",
+        status: "done",
       },
       {
         title: "UI Polish & Consistency",

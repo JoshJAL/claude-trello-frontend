@@ -43,6 +43,33 @@ export function Footer() {
             CLI Docs
           </a>
         </div>
+
+        <div className="flex flex-wrap items-center justify-center gap-4 text-xs text-[var(--shore-line)]">
+          <a
+            href="https://account.task-pilot.dev/privacy"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="no-underline hover:text-[var(--sea-ink-soft)]"
+          >
+            Privacy Policy
+          </a>
+          <a
+            href="https://account.task-pilot.dev/terms"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="no-underline hover:text-[var(--sea-ink-soft)]"
+          >
+            Terms of Service
+          </a>
+          <a
+            href="https://account.task-pilot.dev/cookies"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="no-underline hover:text-[var(--sea-ink-soft)]"
+          >
+            Cookie Policy
+          </a>
+        </div>
       </div>
     </footer>
   );
