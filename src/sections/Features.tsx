@@ -18,7 +18,7 @@ const features = [
     icon: Zap,
     title: "Fully Automated",
     description:
-      "Claude reads cards, makes code changes, checks off items, and moves cards to Done. You watch it happen.",
+      "The agent reads your tasks, makes code changes, checks off items, and moves tasks to Done. You watch it happen.",
   },
   {
     icon: ShieldCheck,
