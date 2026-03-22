@@ -191,16 +191,16 @@ npx @joshjal/taskpilot run`}</Code>
                   desc: "Max concurrent agents in parallel mode (1-5, default: 3)",
                 },
                 {
+                  flag: "--branch <name>",
+                  desc: "Git branch to work on (local: checks out the branch; cloud: commits to it)",
+                },
+                {
                   flag: "--pr",
                   desc: "Auto-create a pull request after the session completes",
                 },
                 {
                   flag: "--no-pr",
                   desc: "Skip PR creation even if enabled in settings",
-                },
-                {
-                  flag: "--no-deps",
-                  desc: "Ignore task dependencies and run all tasks immediately",
                 },
               ]}
             />

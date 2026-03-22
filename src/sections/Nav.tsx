@@ -44,6 +44,12 @@ export function Nav() {
             Self-Host
           </a>
           <a
+            href="#roadmap"
+            className="hidden text-[var(--sea-ink-soft)] no-underline hover:text-[var(--sea-ink)] sm:inline"
+          >
+            Roadmap
+          </a>
+          <a
             href="https://account.task-pilot.dev"
             target="_blank"
             rel="noopener noreferrer"

@@ -34,9 +34,9 @@ const features = [
   },
   {
     icon: GitBranch,
-    title: "Works on Any Codebase",
+    title: "Local or Cloud",
     description:
-      "Point the agent at any local directory. It has full read/write access to your files during a session.",
+      "Run agents locally on your machine, or in cloud mode via GitHub/GitLab APIs. Pick an existing branch or auto-generate one.",
   },
   {
     icon: MessageCircle,
