@@ -190,7 +190,45 @@ npx @joshjal/taskpilot run`}</Code>
                   flag: "-c, --concurrency <n>",
                   desc: "Max concurrent agents in parallel mode (1-5, default: 3)",
                 },
+                {
+                  flag: "--pr",
+                  desc: "Auto-create a pull request after the session completes",
+                },
+                {
+                  flag: "--no-pr",
+                  desc: "Skip PR creation even if enabled in settings",
+                },
+                {
+                  flag: "--no-deps",
+                  desc: "Ignore task dependencies and run all tasks immediately",
+                },
               ]}
+            />
+            <CommandCard
+              command="history"
+              description="View past AI agent sessions"
+              flags={[
+                {
+                  flag: "--all",
+                  desc: "Show sessions across all projects (default: current directory only)",
+                },
+                {
+                  flag: "--source <name>",
+                  desc: "Filter by task source: trello, github, or gitlab",
+                },
+                {
+                  flag: "--status <state>",
+                  desc: "Filter by status: completed, failed, or cancelled",
+                },
+                {
+                  flag: "--events",
+                  desc: "Include the full event log for each session",
+                },
+              ]}
+            />
+            <CommandCard
+              command="usage"
+              description="Show current month spending summary"
             />
             <CommandCard
               command="boards"

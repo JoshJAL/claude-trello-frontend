@@ -5,6 +5,7 @@ import { DashboardSources } from "./web-docs/DashboardSources";
 import { SessionFlow } from "./web-docs/SessionFlow";
 import { ParallelModeSection } from "./web-docs/ParallelModeSection";
 import { SettingsSection } from "./web-docs/SettingsSection";
+import { AdvancedFeatures } from "./web-docs/AdvancedFeatures";
 import { TaskFormatSection } from "./web-docs/TaskFormatSection";
 import { TroubleshootingSection } from "./web-docs/TroubleshootingSection";
 import { SecuritySection } from "./web-docs/SecuritySection";
@@ -20,6 +21,7 @@ export function WebDocs() {
         <SessionFlow />
         <ParallelModeSection />
         <SettingsSection />
+        <AdvancedFeatures />
         <TaskFormatSection />
         <TroubleshootingSection />
         <SecuritySection />
