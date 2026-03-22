@@ -26,6 +26,12 @@ export function Nav() {
             Features
           </a>
           <a
+            href="#web"
+            className="hidden text-[var(--sea-ink-soft)] no-underline hover:text-[var(--sea-ink)] sm:inline"
+          >
+            Web App
+          </a>
+          <a
             href="#cli"
             className="hidden text-[var(--sea-ink-soft)] no-underline hover:text-[var(--sea-ink)] sm:inline"
           >

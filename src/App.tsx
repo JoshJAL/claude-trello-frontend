@@ -2,6 +2,7 @@ import { Nav } from "./sections/Nav";
 import { Hero } from "./sections/Hero";
 import { HowItWorks } from "./sections/HowItWorks";
 import { Features } from "./sections/Features";
+import { WebDocs } from "./sections/WebDocs";
 import { CliDocs } from "./sections/CliDocs";
 import { Cta } from "./sections/Cta";
 import { Footer } from "./sections/Footer";
@@ -13,6 +14,7 @@ export default function App() {
       <Hero />
       <HowItWorks />
       <Features />
+      <WebDocs />
       <CliDocs />
       <Cta />
       <Footer />
