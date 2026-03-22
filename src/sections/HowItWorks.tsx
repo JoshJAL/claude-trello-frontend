@@ -23,7 +23,7 @@ const steps = [
     icon: CheckCircle2,
     title: "Items get checked off",
     description:
-      "As Claude completes each task, it marks the checklist item done on Trello. Finished cards move to Done.",
+      "As the agent completes each task, it marks items done on your task board. Finished cards move to Done.",
   },
 ];
 
