@@ -11,7 +11,7 @@ const steps = [
     icon: LayoutList,
     title: "Pick a board",
     description:
-      "Select one of your Trello boards. The app shows all cards and their checklist items.",
+      "Select a board, repo, or project. The app shows all cards and their checklist items.",
   },
   {
     icon: Cpu,
