@@ -24,7 +24,7 @@ const features = [
     icon: ShieldCheck,
     title: "Your Keys, Encrypted",
     description:
-      "Your Anthropic API key is encrypted at rest with AES-256-GCM. It's only decrypted for the duration of a session.",
+      "Your API keys are encrypted at rest with AES-256-GCM. They're only decrypted for the duration of a session.",
   },
   {
     icon: Globe,
