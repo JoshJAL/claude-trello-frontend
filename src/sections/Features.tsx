@@ -36,7 +36,7 @@ const features = [
     icon: GitBranch,
     title: "Works on Any Codebase",
     description:
-      "Point Claude at any local directory. It has full read/write access to your files during a session.",
+      "Point the agent at any local directory. It has full read/write access to your files during a session.",
   },
   {
     icon: MessageCircle,
