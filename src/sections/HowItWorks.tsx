@@ -15,7 +15,7 @@ const steps = [
   },
   {
     icon: Cpu,
-    title: "Claude gets to work",
+    title: "Your AI agent gets to work",
     description:
       "Claude Code launches in your project directory, reads each card, and starts making the code changes.",
   },
