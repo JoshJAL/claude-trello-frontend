@@ -129,6 +129,18 @@ const ROADMAP: RoadmapCategory[] = [
           "A native desktop app with the same interface as the web app, enabling local development without needing the CLI.",
         status: "planned",
       },
+      {
+        title: "Google Drive Workspace",
+        description:
+          "Connect a Google Drive folder as a workspace. Agents can read, write, and edit files — including Google Sheets — directly in your Drive.",
+        status: "planned",
+      },
+      {
+        title: "OneDrive Workspace",
+        description:
+          "Connect a OneDrive folder as a workspace. Agents can read, write, and edit files — including Excel workbooks — directly in your OneDrive.",
+        status: "planned",
+      },
     ],
   },
 ];
