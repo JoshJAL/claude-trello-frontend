@@ -5,7 +5,7 @@ const steps = [
     icon: UserPlus,
     title: "Sign up and connect",
     description:
-      "Create an account, connect your Trello, and add your Anthropic API key. Takes about two minutes.",
+      "Create an account, connect a task source (Trello, GitHub, or GitLab) and add an AI provider key. Takes about two minutes.",
   },
   {
     icon: LayoutList,
