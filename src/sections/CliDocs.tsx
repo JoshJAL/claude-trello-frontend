@@ -91,10 +91,10 @@ export function CliDocs() {
             <code className="rounded-md border border-[var(--line)] bg-[var(--surface)] px-2 py-0.5 text-sm font-semibold text-[var(--sea-ink)]">
               npx
             </code>
-            .
+            . Supports Trello, GitHub, and GitLab with multiple AI providers.
           </p>
           <a
-            href="https://www.npmjs.com/package/claude-trello-cli"
+            href="https://www.npmjs.com/package/taskpilot-cli"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-5 inline-flex items-center gap-1.5 rounded-lg border border-[var(--line)] bg-[var(--surface)] px-4 py-2 text-sm font-semibold text-[var(--sea-ink)] no-underline hover:bg-[var(--foam)]"
@@ -110,20 +110,20 @@ export function CliDocs() {
             Quick Start
           </h3>
           <Code
-            copyText={`npx claude-trello-cli register\nnpx claude-trello-cli setup\ncd ~/my-project\nnpx claude-trello-cli run`}
+            copyText={`npx taskpilot-cli register\nnpx taskpilot-cli setup\ncd ~/my-project\nnpx taskpilot-cli run`}
           >{`# Create an account (or "login" if you have one)
-npx claude-trello-cli register
+npx taskpilot-cli register
 
-# Connect Trello + save your Anthropic API key
-npx claude-trello-cli setup
+# Connect a task source + save your AI provider API key
+npx taskpilot-cli setup
 
 # Navigate to your project and go
 cd ~/my-project
-npx claude-trello-cli run`}</Code>
+npx taskpilot-cli run`}</Code>
           <p className="mt-4 text-sm text-[var(--sea-ink-soft)]">
             Or install globally for a shorter command:{" "}
             <code className="rounded-md border border-[var(--line)] bg-[var(--surface)] px-1.5 py-0.5 text-xs text-[var(--sea-ink)]">
-              npm i -g claude-trello-cli
+              npm i -g taskpilot-cli
             </code>
           </p>
         </div>
@@ -156,26 +156,49 @@ npx claude-trello-cli run`}</Code>
             />
             <CommandCard
               command="setup"
-              description="Connect Trello and save your API key (interactive wizard)"
+              description="Connect a task source and save your AI provider API key (interactive wizard)"
             />
             <CommandCard
               command="run"
-              description="Select a board and start a Claude Code session"
+              description="Select a task source and start an AI coding session"
               flags={[
-                { flag: "-b, --board <id>", desc: "Skip board selection" },
+                {
+                  flag: "-b, --board <id>",
+                  desc: "Board/repo ID — skip interactive selection",
+                },
                 {
                   flag: "-d, --dir <path>",
                   desc: "Working directory (default: cwd)",
                 },
                 {
                   flag: "-m, --message <text>",
-                  desc: "Initial instructions for Claude",
+                  desc: "Initial instructions for the AI agent",
+                },
+                {
+                  flag: "-s, --source <name>",
+                  desc: "Task source: trello, github, or gitlab (default: trello)",
+                },
+                {
+                  flag: "-P, --provider <name>",
+                  desc: "AI provider: claude, openai, or groq (default: claude)",
+                },
+                {
+                  flag: "-p, --parallel",
+                  desc: "Run one agent per card/issue in parallel (uses git worktrees)",
+                },
+                {
+                  flag: "-c, --concurrency <n>",
+                  desc: "Max concurrent agents in parallel mode (1-5, default: 3)",
                 },
               ]}
             />
             <CommandCard
               command="boards"
               description="List your Trello boards with IDs"
+            />
+            <CommandCard
+              command="repos"
+              description="List your connected GitHub repositories"
             />
             <CommandCard
               command="status"
@@ -188,21 +211,71 @@ npx claude-trello-cli run`}</Code>
           </div>
         </div>
 
-        {/* Example */}
-        <div>
+        {/* Examples */}
+        <div className="mb-14">
           <h3 className="mb-5 text-xl font-bold text-[var(--sea-ink)]">
-            Give Claude extra context
+            Task Sources
           </h3>
           <Code
-            copyText='npx claude-trello-cli run --message "Check the development branch for comparison"'
-          >{`# Pass initial instructions
-npx claude-trello-cli run --message "Check the development branch for comparison"
+            copyText="npx taskpilot-cli run --source github"
+          >{`# Trello (default)
+npx taskpilot-cli run
 
-# Combine all flags for a scripted workflow
-npx claude-trello-cli run \\
-  --board 60d5e2a3f1a2b40017c3d4e5 \\
+# GitHub issues
+npx taskpilot-cli run --source github
+
+# GitLab issues
+npx taskpilot-cli run --source gitlab`}</Code>
+        </div>
+
+        <div className="mb-14">
+          <h3 className="mb-5 text-xl font-bold text-[var(--sea-ink)]">
+            AI Providers
+          </h3>
+          <Code
+            copyText="npx taskpilot-cli run --provider openai"
+          >{`# Claude via Claude Code SDK (default)
+npx taskpilot-cli run
+
+# OpenAI (gpt-4o)
+npx taskpilot-cli run --provider openai
+
+# Groq (llama-3.3-70b) — fast inference
+npx taskpilot-cli run --provider groq`}</Code>
+        </div>
+
+        <div className="mb-14">
+          <h3 className="mb-5 text-xl font-bold text-[var(--sea-ink)]">
+            Parallel Mode
+          </h3>
+          <Code
+            copyText="npx taskpilot-cli run --parallel"
+          >{`# Run one agent per card/issue (default: 3 concurrent)
+npx taskpilot-cli run --parallel
+
+# Up to 5 concurrent agents
+npx taskpilot-cli run --parallel --concurrency 5
+
+# Combine with any source and provider
+npx taskpilot-cli run --source github --provider openai --parallel`}</Code>
+        </div>
+
+        <div>
+          <h3 className="mb-5 text-xl font-bold text-[var(--sea-ink)]">
+            Full Scripted Workflow
+          </h3>
+          <Code
+            copyText={'npx taskpilot-cli run --source github --provider claude --parallel --dir ~/projects/my-api --message "Just go"'}
+          >{`# Login once
+npx taskpilot-cli login
+
+# Then run from anywhere with all options
+npx taskpilot-cli run \\
+  --source github \\
+  --provider claude \\
+  --parallel \\
   --dir ~/projects/my-api \\
-  --message "Focus on backend cards first"`}</Code>
+  --message "Just go"`}</Code>
         </div>
       </div>
     </section>
