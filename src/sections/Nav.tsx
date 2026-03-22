@@ -38,6 +38,12 @@ export function Nav() {
             CLI
           </a>
           <a
+            href="#self-hosting"
+            className="hidden text-[var(--sea-ink-soft)] no-underline hover:text-[var(--sea-ink)] sm:inline"
+          >
+            Self-Host
+          </a>
+          <a
             href="https://ct.joshualevine.me"
             target="_blank"
             rel="noopener noreferrer"

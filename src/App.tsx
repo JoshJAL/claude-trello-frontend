@@ -4,6 +4,7 @@ import { HowItWorks } from "./sections/HowItWorks";
 import { Features } from "./sections/Features";
 import { WebDocs } from "./sections/WebDocs";
 import { CliDocs } from "./sections/CliDocs";
+import { SelfHosting } from "./sections/SelfHosting";
 import { Cta } from "./sections/Cta";
 import { Footer } from "./sections/Footer";
 
@@ -16,6 +17,7 @@ export default function App() {
       <Features />
       <WebDocs />
       <CliDocs />
+      <SelfHosting />
       <Cta />
       <Footer />
     </div>
