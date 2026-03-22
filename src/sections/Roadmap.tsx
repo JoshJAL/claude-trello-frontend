@@ -123,6 +123,12 @@ const ROADMAP: RoadmapCategory[] = [
           "Run sessions entirely via GitHub/GitLab APIs without a local checkout.",
         status: "done",
       },
+      {
+        title: "Desktop Application",
+        description:
+          "A native desktop app with the same interface as the web app, enabling local development without needing the CLI.",
+        status: "planned",
+      },
     ],
   },
 ];

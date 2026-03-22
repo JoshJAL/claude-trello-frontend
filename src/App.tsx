@@ -9,10 +9,20 @@ import { Roadmap } from "./sections/Roadmap";
 import { ConsentBanner } from "./sections/ConsentBanner";
 import { Cta } from "./sections/Cta";
 import { Footer } from "./sections/Footer";
+import { PrivacyPage } from "./pages/PrivacyPage";
+import { TermsPage } from "./pages/TermsPage";
+import { DataPolicyPage } from "./pages/DataPolicyPage";
+import { RouterProvider, useRouter } from "./router";
 
-export default function App() {
+function Routes() {
+  const { path } = useRouter();
+
+  if (path === "/privacy") return <PrivacyPage />;
+  if (path === "/terms") return <TermsPage />;
+  if (path === "/data-policy") return <DataPolicyPage />;
+
   return (
-    <div className="min-h-screen bg-sand text-ink font-sans">
+    <div className="min-h-screen font-sans">
       <Nav />
       <Hero />
       <HowItWorks />
@@ -25,5 +35,13 @@ export default function App() {
       <Footer />
       <ConsentBanner />
     </div>
+  );
+}
+
+export default function App() {
+  return (
+    <RouterProvider>
+      <Routes />
+    </RouterProvider>
   );
 }

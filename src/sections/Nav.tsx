@@ -1,17 +1,18 @@
 import { Terminal } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
+import { Link } from "../router";
 
 export function Nav() {
   return (
     <header className="sticky top-0 z-50 border-b border-[var(--line)] bg-[var(--header-bg)] px-4 backdrop-blur-xl">
       <nav className="mx-auto flex max-w-5xl items-center justify-between py-3 sm:py-4">
-        <a
-          href="/"
+        <Link
+          to="/"
           className="flex items-center gap-2 font-bold text-[var(--sea-ink)] no-underline"
         >
           <Terminal size={20} className="text-[var(--lagoon)]" />
           TaskPilot
-        </a>
+        </Link>
         <div className="flex items-center gap-4 text-sm font-semibold sm:gap-6">
           <a
             href="#how-it-works"

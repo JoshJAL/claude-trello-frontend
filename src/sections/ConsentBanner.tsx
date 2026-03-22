@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Cookie, X } from "lucide-react";
+import { Link } from "../router";
 
 const CONSENT_KEY = "cookie-consent";
 
@@ -26,14 +27,12 @@ export function ConsentBanner() {
           <Cookie size={16} className="shrink-0 text-[var(--lagoon)]" />
           <span>
             TaskPilot uses a single essential cookie for authentication.{" "}
-            <a
-              href="https://account.task-pilot.dev/cookies"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/data-policy"
               className="font-medium text-[var(--lagoon)] hover:underline"
             >
               Learn more
-            </a>
+            </Link>
           </span>
         </div>
         <div className="flex items-center gap-2">
