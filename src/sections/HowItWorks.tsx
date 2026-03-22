@@ -17,7 +17,7 @@ const steps = [
     icon: Cpu,
     title: "Your AI agent gets to work",
     description:
-      "Claude Code launches in your project directory, reads each card, and starts making the code changes.",
+      "The AI agent launches in your project directory, reads each task, and starts making the code changes.",
   },
   {
     icon: CheckCircle2,
