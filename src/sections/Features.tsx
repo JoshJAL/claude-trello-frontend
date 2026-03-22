@@ -42,7 +42,7 @@ const features = [
     icon: MessageCircle,
     title: "Give Your Agent Context",
     description:
-      'Send initial instructions like "check the dev branch for comparison" or "focus on backend cards first".',
+      'Send initial instructions like "check the dev branch for comparison" or "focus on backend tasks first".',
   },
 ];
 
