@@ -94,7 +94,7 @@ export function CliDocs() {
             . Supports Trello, GitHub, and GitLab with multiple AI providers.
           </p>
           <a
-            href="https://www.npmjs.com/package/taskpilot-cli"
+            href="https://www.npmjs.com/package/@joshjal/taskpilot"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-5 inline-flex items-center gap-1.5 rounded-lg border border-[var(--line)] bg-[var(--surface)] px-4 py-2 text-sm font-semibold text-[var(--sea-ink)] no-underline hover:bg-[var(--foam)]"
@@ -110,20 +110,20 @@ export function CliDocs() {
             Quick Start
           </h3>
           <Code
-            copyText={`npx taskpilot-cli register\nnpx taskpilot-cli setup\ncd ~/my-project\nnpx taskpilot-cli run`}
+            copyText={`npx @joshjal/taskpilot register\nnpx @joshjal/taskpilot setup\ncd ~/my-project\nnpx @joshjal/taskpilot run`}
           >{`# Create an account (or "login" if you have one)
-npx taskpilot-cli register
+npx @joshjal/taskpilot register
 
 # Connect a task source + save your AI provider API key
-npx taskpilot-cli setup
+npx @joshjal/taskpilot setup
 
 # Navigate to your project and go
 cd ~/my-project
-npx taskpilot-cli run`}</Code>
+npx @joshjal/taskpilot run`}</Code>
           <p className="mt-4 text-sm text-[var(--sea-ink-soft)]">
             Or install globally for a shorter command:{" "}
             <code className="rounded-md border border-[var(--line)] bg-[var(--surface)] px-1.5 py-0.5 text-xs text-[var(--sea-ink)]">
-              npm i -g taskpilot-cli
+              npm i -g @joshjal/taskpilot
             </code>
           </p>
         </div>
@@ -217,15 +217,15 @@ npx taskpilot-cli run`}</Code>
             Task Sources
           </h3>
           <Code
-            copyText="npx taskpilot-cli run --source github"
+            copyText="npx @joshjal/taskpilot run --source github"
           >{`# Trello (default)
-npx taskpilot-cli run
+npx @joshjal/taskpilot run
 
 # GitHub issues
-npx taskpilot-cli run --source github
+npx @joshjal/taskpilot run --source github
 
 # GitLab issues
-npx taskpilot-cli run --source gitlab`}</Code>
+npx @joshjal/taskpilot run --source gitlab`}</Code>
         </div>
 
         <div className="mb-14">
@@ -233,15 +233,15 @@ npx taskpilot-cli run --source gitlab`}</Code>
             AI Providers
           </h3>
           <Code
-            copyText="npx taskpilot-cli run --provider openai"
+            copyText="npx @joshjal/taskpilot run --provider openai"
           >{`# Claude via Claude Code SDK (default)
-npx taskpilot-cli run
+npx @joshjal/taskpilot run
 
 # OpenAI (gpt-4o)
-npx taskpilot-cli run --provider openai
+npx @joshjal/taskpilot run --provider openai
 
 # Groq (llama-3.3-70b) — fast inference
-npx taskpilot-cli run --provider groq`}</Code>
+npx @joshjal/taskpilot run --provider groq`}</Code>
         </div>
 
         <div className="mb-14">
@@ -249,15 +249,15 @@ npx taskpilot-cli run --provider groq`}</Code>
             Parallel Mode
           </h3>
           <Code
-            copyText="npx taskpilot-cli run --parallel"
+            copyText="npx @joshjal/taskpilot run --parallel"
           >{`# Run one agent per card/issue (default: 3 concurrent)
-npx taskpilot-cli run --parallel
+npx @joshjal/taskpilot run --parallel
 
 # Up to 5 concurrent agents
-npx taskpilot-cli run --parallel --concurrency 5
+npx @joshjal/taskpilot run --parallel --concurrency 5
 
 # Combine with any source and provider
-npx taskpilot-cli run --source github --provider openai --parallel`}</Code>
+npx @joshjal/taskpilot run --source github --provider openai --parallel`}</Code>
         </div>
 
         <div>
@@ -265,12 +265,12 @@ npx taskpilot-cli run --source github --provider openai --parallel`}</Code>
             Full Scripted Workflow
           </h3>
           <Code
-            copyText={'npx taskpilot-cli run --source github --provider claude --parallel --dir ~/projects/my-api --message "Just go"'}
+            copyText={'npx @joshjal/taskpilot run --source github --provider claude --parallel --dir ~/projects/my-api --message "Just go"'}
           >{`# Login once
-npx taskpilot-cli login
+npx @joshjal/taskpilot login
 
 # Then run from anywhere with all options
-npx taskpilot-cli run \\
+npx @joshjal/taskpilot run \\
   --source github \\
   --provider claude \\
   --parallel \\

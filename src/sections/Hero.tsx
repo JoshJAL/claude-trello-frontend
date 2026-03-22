@@ -10,14 +10,14 @@ export function Hero() {
         </div>
 
         <h1 className="mb-6 text-4xl font-extrabold leading-tight tracking-tight text-[var(--sea-ink)] sm:text-5xl lg:text-6xl">
-          Let Claude Code work through{" "}
-          <span className="text-[var(--lagoon)]">your Trello boards</span>
+          AI coding agents for{" "}
+          <span className="text-[var(--lagoon)]">your task boards</span>
         </h1>
 
         <p className="mx-auto mb-10 max-w-2xl text-lg leading-relaxed text-[var(--sea-ink-soft)] sm:text-xl">
-          Point Claude at a Trello board and a codebase. It reads the cards,
-          makes the code changes, and checks off items as it finishes them.
-          From your browser or your terminal.
+          Point AI agents at your Trello boards, GitHub issues, or GitLab
+          projects. They read the tasks, make code changes, and check items
+          off as they go. From your browser or your terminal.
         </p>
 
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -52,7 +52,7 @@ export function Hero() {
             <code>
               <span className="text-[var(--lagoon-light)]">$</span>{" "}
               <span className="text-[var(--code-text)]">
-                npx claude-trello-cli run
+                npx @joshjal/taskpilot run
               </span>
               {"\n\n"}
               <span className="text-[var(--code-text)]/50">

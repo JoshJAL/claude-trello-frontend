@@ -5,7 +5,7 @@ export function Cta() {
     <section className="border-t border-[var(--line)] bg-[var(--foam)]/50 px-6 py-28 sm:py-36">
       <div className="mx-auto max-w-2xl text-center">
         <h2 className="mb-5 text-3xl font-extrabold text-[var(--sea-ink)] sm:text-4xl">
-          Ready to let Claude work through your board?
+          Ready to let AI work through your board?
         </h2>
         <p className="mb-10 text-lg leading-relaxed text-[var(--sea-ink-soft)]">
           Sign up in the browser or go straight from your terminal. Either way,
@@ -23,7 +23,7 @@ export function Cta() {
           </a>
           <div className="rounded-xl border border-[var(--line)] bg-[var(--surface)] px-6 py-3">
             <code className="text-sm font-semibold text-[var(--sea-ink)]">
-              npx claude-trello-cli register
+              npx @joshjal/taskpilot register
             </code>
           </div>
         </div>

@@ -6,7 +6,7 @@ export function Footer() {
       <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-6 sm:flex-row">
         <div className="flex items-center gap-2 text-sm font-semibold text-[var(--sea-ink)]">
           <Terminal size={16} className="text-[var(--lagoon)]" />
-          Claude Trello Bridge
+          TaskPilot
         </div>
 
         <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-[var(--sea-ink-soft)]">
@@ -19,7 +19,7 @@ export function Footer() {
             Web App
           </a>
           <a
-            href="https://www.npmjs.com/package/claude-trello-cli"
+            href="https://www.npmjs.com/package/@joshjal/taskpilot"
             target="_blank"
             rel="noopener noreferrer"
             className="no-underline hover:text-[var(--sea-ink)]"
