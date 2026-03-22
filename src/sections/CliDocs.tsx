@@ -195,6 +195,10 @@ npx @joshjal/taskpilot run`}</Code>
                   desc: "Git branch to work on (local: checks out the branch; cloud: commits to it)",
                 },
                 {
+                  flag: "--workspace <target>",
+                  desc: "Cloud storage workspace — currently web-only (e.g. google:<folderId> or onedrive:<folderId>)",
+                },
+                {
                   flag: "--pr",
                   desc: "Auto-create a pull request after the session completes",
                 },
