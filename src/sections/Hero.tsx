@@ -105,7 +105,7 @@ export function Hero() {
               </span>
               {"\n"}
               <span className="text-green-400">
-                {"  Checked item on Trello"}
+                {"  Checked item on task board"}
               </span>
               {"\n"}
               <span className="text-green-400 font-semibold">
