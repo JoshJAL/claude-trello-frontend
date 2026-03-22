@@ -93,7 +93,7 @@ export function Hero() {
               </span>
               {"\n"}
               <span className="text-blue-400 font-semibold">
-                {"\n  Starting Claude Code session..."}
+                {"\n  Starting AI agent session..."}
               </span>
               {"\n\n"}
               <span className="text-[var(--code-text)]/50">
