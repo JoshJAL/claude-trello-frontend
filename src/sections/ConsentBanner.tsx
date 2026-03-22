@@ -3,7 +3,7 @@ import { Cookie, X } from "lucide-react";
 
 const CONSENT_KEY = "cookie-consent";
 
-export function CookieBanner() {
+export function ConsentBanner() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
