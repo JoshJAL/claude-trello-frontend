@@ -44,7 +44,7 @@ export function Nav() {
             Self-Host
           </a>
           <a
-            href="https://ct.joshualevine.me"
+            href="https://account.task-pilot.dev"
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-lg bg-[var(--lagoon)] px-4 py-2 text-white no-underline hover:opacity-90"

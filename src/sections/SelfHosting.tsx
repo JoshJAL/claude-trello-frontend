@@ -110,7 +110,7 @@ export function SelfHosting() {
               <ExternalLink size={14} />
             </a>
             <a
-              href="https://ct.joshualevine.me/docs/self-hosting"
+              href="https://account.task-pilot.dev/docs/self-hosting"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 rounded-lg border border-[var(--line)] bg-[var(--surface)] px-4 py-2.5 text-sm font-semibold text-[var(--sea-ink)] no-underline hover:bg-[var(--foam)]"

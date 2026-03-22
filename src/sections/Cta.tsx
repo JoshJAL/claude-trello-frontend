@@ -13,7 +13,7 @@ export function Cta() {
         </p>
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
           <a
-            href="https://ct.joshualevine.me/register"
+            href="https://account.task-pilot.dev/register"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-xl bg-[var(--lagoon)] px-6 py-3 text-base font-semibold text-white no-underline shadow-lg shadow-[var(--lagoon)]/20 hover:opacity-90"

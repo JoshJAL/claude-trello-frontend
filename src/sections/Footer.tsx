@@ -11,7 +11,7 @@ export function Footer() {
 
         <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-[var(--sea-ink-soft)]">
           <a
-            href="https://ct.joshualevine.me"
+            href="https://account.task-pilot.dev"
             target="_blank"
             rel="noopener noreferrer"
             className="no-underline hover:text-[var(--sea-ink)]"
@@ -35,7 +35,7 @@ export function Footer() {
             GitHub
           </a>
           <a
-            href="https://ct.joshualevine.me/docs/cli"
+            href="https://account.task-pilot.dev/docs/cli"
             target="_blank"
             rel="noopener noreferrer"
             className="no-underline hover:text-[var(--sea-ink)]"
