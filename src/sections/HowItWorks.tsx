@@ -36,7 +36,7 @@ export function HowItWorks() {
             How It Works
           </p>
           <h2 className="text-3xl font-extrabold text-[var(--sea-ink)] sm:text-4xl">
-            Four steps, then Claude takes over
+            Four steps, then your agent takes over
           </h2>
         </div>
 
