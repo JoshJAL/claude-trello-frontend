@@ -33,7 +33,7 @@ export function ParallelModeSection() {
                 </tr>
                 <tr className="border-b border-[var(--line)]">
                   <td className="py-1.5">Per-agent cost budget</td>
-                  <td>$2 (Claude provider)</td>
+                  <td>$2 (applies to all providers)</td>
                 </tr>
                 <tr className="border-b border-[var(--line)]">
                   <td className="py-1.5">Isolation</td>
