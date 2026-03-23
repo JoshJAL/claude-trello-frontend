@@ -1,4 +1,4 @@
-import { ArrowRight, Monitor, Apple, Download } from "lucide-react";
+import { ArrowRight, Monitor, Apple } from "lucide-react";
 
 const RELEASE_BASE = "https://github.com/JoshJAL/taskpilot-desktop/releases/latest/download";
 const VERSION = "0.1.0";
