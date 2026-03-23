@@ -1,12 +1,47 @@
-import { ArrowRight, Package } from "lucide-react";
+import { ArrowRight, Monitor, Apple, Download } from "lucide-react";
+
+const RELEASE_BASE = "https://github.com/JoshJAL/taskpilot-desktop/releases/latest/download";
+const VERSION = "0.1.0";
+
+const DOWNLOADS = {
+  windows: {
+    label: "Download for Windows",
+    file: `TaskPilot.Setup.${VERSION}.exe`,
+    icon: Monitor,
+  },
+  mac: {
+    label: "Download for macOS",
+    file: `TaskPilot-${VERSION}-arm64.dmg`,
+    icon: Apple,
+  },
+  linux: {
+    label: "Download for Linux",
+    file: `TaskPilot-${VERSION}.AppImage`,
+    icon: Monitor,
+  },
+} as const;
+
+type Platform = keyof typeof DOWNLOADS;
+
+function detectPlatform(): Platform {
+  if (typeof navigator === "undefined") return "linux";
+  const ua = navigator.userAgent.toLowerCase();
+  if (ua.includes("win")) return "windows";
+  if (ua.includes("mac")) return "mac";
+  return "linux";
+}
 
 export function Hero() {
+  const platform = detectPlatform();
+  const download = DOWNLOADS[platform];
+  const DownloadIcon = download.icon;
+
   return (
     <section className="relative overflow-hidden px-6 pt-24 pb-20 sm:pt-36 sm:pb-32">
       <div className="mx-auto max-w-3xl text-center">
         <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[var(--line)] bg-[var(--surface)] px-4 py-1.5 text-sm font-medium text-[var(--sea-ink-soft)]">
-          <Package size={14} className="text-[var(--lagoon)]" />
-          Now available on npm
+          <Monitor size={14} className="text-[var(--lagoon)]" />
+          Desktop app now available
         </div>
 
         <h1 className="mb-6 text-4xl font-extrabold leading-tight tracking-tight text-[var(--sea-ink)] sm:text-5xl lg:text-6xl">
@@ -17,7 +52,7 @@ export function Hero() {
         <p className="mx-auto mb-10 max-w-2xl text-lg leading-relaxed text-[var(--sea-ink-soft)] sm:text-xl">
           Point AI agents at your Trello boards, GitHub issues, or GitLab
           projects. They read the tasks, make code changes, and check items
-          off as they go. From your browser or your terminal.
+          off as they go. From your browser, terminal, or desktop app.
         </p>
 
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -31,10 +66,38 @@ export function Hero() {
             <ArrowRight size={18} />
           </a>
           <a
+            href={`${RELEASE_BASE}/${download.file}`}
+            className="inline-flex items-center gap-2 rounded-xl border border-[var(--line)] bg-[var(--surface)] px-6 py-3 text-base font-semibold text-[var(--sea-ink)] no-underline hover:bg-[var(--foam)]"
+          >
+            <DownloadIcon size={18} />
+            {download.label}
+          </a>
+          <a
             href="#cli"
             className="inline-flex items-center gap-2 rounded-xl border border-[var(--line)] bg-[var(--surface)] px-6 py-3 text-base font-semibold text-[var(--sea-ink)] no-underline hover:bg-[var(--foam)]"
           >
             Use the CLI
+          </a>
+        </div>
+
+        {/* Other platform links */}
+        <div className="mt-4 flex items-center justify-center gap-4 text-xs text-[var(--sea-ink-soft)]">
+          {(Object.keys(DOWNLOADS) as Platform[])
+            .filter((p) => p !== platform)
+            .map((p) => (
+              <a
+                key={p}
+                href={`${RELEASE_BASE}/${DOWNLOADS[p].file}`}
+                className="hover:text-[var(--lagoon)]"
+              >
+                {p === "windows" ? "Windows" : p === "mac" ? "macOS" : "Linux"}
+              </a>
+            ))}
+          <a
+            href="https://github.com/JoshJAL/taskpilot-desktop/releases/latest"
+            className="hover:text-[var(--lagoon)]"
+          >
+            All downloads
           </a>
         </div>
 
