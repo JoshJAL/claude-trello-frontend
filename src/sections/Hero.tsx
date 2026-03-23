@@ -1,22 +1,21 @@
 import { ArrowRight, Monitor, Apple } from "lucide-react";
 
 const RELEASE_BASE = "https://github.com/JoshJAL/taskpilot-desktop/releases/latest/download";
-const VERSION = "0.1.0";
 
 const DOWNLOADS = {
   windows: {
     label: "Download for Windows",
-    file: `TaskPilot.Setup.${VERSION}.exe`,
+    file: "TaskPilot-Setup.exe",
     icon: Monitor,
   },
   mac: {
     label: "Download for macOS",
-    file: `TaskPilot-${VERSION}-arm64.dmg`,
+    file: "TaskPilot-mac.dmg",
     icon: Apple,
   },
   linux: {
     label: "Download for Linux",
-    file: `TaskPilot-${VERSION}.AppImage`,
+    file: "TaskPilot.AppImage",
     icon: Monitor,
   },
 } as const;
