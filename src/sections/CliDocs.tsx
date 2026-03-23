@@ -196,7 +196,7 @@ npx @joshjal/taskpilot run`}</Code>
                 },
                 {
                   flag: "--workspace <target>",
-                  desc: "Cloud storage workspace — currently web-only (e.g. google:<folderId> or onedrive:<folderId>)",
+                  desc: "Cloud storage workspace (e.g. google:<folderId> or onedrive:<folderId>)",
                 },
                 {
                   flag: "--pr",
