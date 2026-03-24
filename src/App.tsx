@@ -12,6 +12,7 @@ import { Footer } from "./sections/Footer";
 import { PrivacyPage } from "./pages/PrivacyPage";
 import { TermsPage } from "./pages/TermsPage";
 import { DataPolicyPage } from "./pages/DataPolicyPage";
+import { AiModelsPage } from "./pages/AiModelsPage";
 import { RouterProvider, useRouter } from "./router";
 
 function Routes() {
@@ -20,6 +21,7 @@ function Routes() {
   if (path === "/privacy") return <PrivacyPage />;
   if (path === "/terms") return <TermsPage />;
   if (path === "/data-policy") return <DataPolicyPage />;
+  if (path === "/ai-models") return <AiModelsPage />;
 
   return (
     <div className="min-h-screen font-sans">

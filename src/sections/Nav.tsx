@@ -50,6 +50,12 @@ export function Nav() {
           >
             Roadmap
           </a>
+          <Link
+            to="/ai-models"
+            className="hidden text-[var(--sea-ink-soft)] no-underline hover:text-[var(--sea-ink)] sm:inline"
+          >
+            AI Models
+          </Link>
           <a
             href="https://account.task-pilot.dev"
             target="_blank"
