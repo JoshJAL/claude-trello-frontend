@@ -1,8 +1,45 @@
-import { Terminal } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
+import { Terminal, Menu, X } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
 import { Link } from "../router";
 
+const navLinks = [
+  { href: "#how-it-works", label: "How It Works" },
+  { href: "#features", label: "Features" },
+  { href: "#web", label: "Web App" },
+  { href: "#cli", label: "CLI" },
+  { href: "#self-hosting", label: "Self-Host" },
+  { href: "#roadmap", label: "Roadmap" },
+] as const;
+
 export function Nav() {
+  const [open, setOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!open) return;
+    function handleClick(e: MouseEvent) {
+      if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
+        setOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClick);
+    return () => document.removeEventListener("mousedown", handleClick);
+  }, [open]);
+
+  useEffect(() => {
+    if (!open) return;
+    function handleKey(e: KeyboardEvent) {
+      if (e.key === "Escape") setOpen(false);
+    }
+    document.addEventListener("keydown", handleKey);
+    return () => document.removeEventListener("keydown", handleKey);
+  }, [open]);
+
+  function close() {
+    setOpen(false);
+  }
+
   return (
     <header className="sticky top-0 z-50 border-b border-[var(--line)] bg-[var(--header-bg)] px-4 backdrop-blur-xl">
       <nav className="mx-auto flex max-w-5xl items-center justify-between py-3 sm:py-4">
@@ -13,58 +50,51 @@ export function Nav() {
           <Terminal size={20} className="text-[var(--lagoon)]" />
           TaskPilot
         </Link>
-        <div className="flex items-center gap-4 text-sm font-semibold sm:gap-6">
-          <a
-            href="#how-it-works"
-            className="hidden text-[var(--sea-ink-soft)] no-underline hover:text-[var(--sea-ink)] sm:inline"
-          >
-            How It Works
-          </a>
-          <a
-            href="#features"
-            className="hidden text-[var(--sea-ink-soft)] no-underline hover:text-[var(--sea-ink)] sm:inline"
-          >
-            Features
-          </a>
-          <a
-            href="#web"
-            className="hidden text-[var(--sea-ink-soft)] no-underline hover:text-[var(--sea-ink)] sm:inline"
-          >
-            Web App
-          </a>
-          <a
-            href="#cli"
-            className="hidden text-[var(--sea-ink-soft)] no-underline hover:text-[var(--sea-ink)] sm:inline"
-          >
-            CLI
-          </a>
-          <a
-            href="#self-hosting"
-            className="hidden text-[var(--sea-ink-soft)] no-underline hover:text-[var(--sea-ink)] sm:inline"
-          >
-            Self-Host
-          </a>
-          <a
-            href="#roadmap"
-            className="hidden text-[var(--sea-ink-soft)] no-underline hover:text-[var(--sea-ink)] sm:inline"
-          >
-            Roadmap
-          </a>
-          <Link
-            to="/ai-models"
-            className="hidden text-[var(--sea-ink-soft)] no-underline hover:text-[var(--sea-ink)] sm:inline"
-          >
-            AI Models
-          </Link>
+
+        <div className="flex items-center gap-3">
           <a
             href="https://account.task-pilot.dev"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-lg bg-[var(--lagoon)] px-4 py-2 text-white no-underline hover:opacity-90"
+            className="rounded-lg bg-[var(--lagoon)] px-4 py-2 text-sm font-semibold text-white no-underline hover:opacity-90"
           >
             Open App
           </a>
           <ThemeToggle />
+
+          <div ref={menuRef} className="relative">
+            <button
+              type="button"
+              onClick={() => setOpen((v) => !v)}
+              aria-label={open ? "Close menu" : "Open menu"}
+              aria-expanded={open}
+              className="rounded-lg border border-[var(--chip-line)] bg-[var(--chip-bg)] p-2 text-[var(--sea-ink)] transition hover:-translate-y-0.5"
+            >
+              {open ? <X size={20} /> : <Menu size={20} />}
+            </button>
+
+            {open && (
+              <div className="absolute right-0 top-full mt-2 min-w-[180px] rounded-xl border border-[var(--line)] bg-[var(--header-bg)] py-2 shadow-lg backdrop-blur-xl">
+                {navLinks.map(({ href, label }) => (
+                  <a
+                    key={href}
+                    href={href}
+                    onClick={close}
+                    className="block px-4 py-2.5 text-sm font-semibold text-[var(--sea-ink-soft)] no-underline hover:bg-[var(--foam)] hover:text-[var(--sea-ink)]"
+                  >
+                    {label}
+                  </a>
+                ))}
+                <Link
+                  to="/ai-models"
+                  onClick={close}
+                  className="block px-4 py-2.5 text-sm font-semibold text-[var(--sea-ink-soft)] no-underline hover:bg-[var(--foam)] hover:text-[var(--sea-ink)]"
+                >
+                  AI Models
+                </Link>
+              </div>
+            )}
+          </div>
         </div>
       </nav>
     </header>
