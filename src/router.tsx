@@ -33,10 +33,12 @@ export function Link({
   to,
   className,
   children,
+  onClick,
 }: {
   to: string;
   className?: string;
   children: React.ReactNode;
+  onClick?: () => void;
 }) {
   const { navigate } = useRouter();
 
@@ -46,6 +48,7 @@ export function Link({
       className={className}
       onClick={(e) => {
         e.preventDefault();
+        onClick?.();
         navigate(to);
       }}
     >
