@@ -92,6 +92,13 @@ export function Nav() {
                 >
                   AI Models
                 </Link>
+                <Link
+                  to="/other-tools"
+                  onClick={close}
+                  className="block px-4 py-2.5 text-sm font-semibold text-[var(--sea-ink-soft)] no-underline hover:bg-[var(--foam)] hover:text-[var(--sea-ink)]"
+                >
+                  Other Tools
+                </Link>
               </div>
             )}
           </div>
