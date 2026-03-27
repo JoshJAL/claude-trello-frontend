@@ -17,7 +17,7 @@ export function WebDocsHeader() {
         href="https://account.task-pilot.dev"
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-5 inline-flex items-center gap-1.5 rounded-lg border border-[var(--line)] bg-[var(--surface)] px-4 py-2 text-sm font-semibold text-[var(--sea-ink)] no-underline hover:bg-[var(--foam)]"
+        className="mt-5 inline-flex items-center gap-1.5 rounded-md border border-[var(--line)] bg-[var(--surface)] px-4 py-2 text-sm font-semibold text-[var(--sea-ink)] no-underline hover:bg-[var(--foam)]"
       >
         <Globe size={14} />
         Open App

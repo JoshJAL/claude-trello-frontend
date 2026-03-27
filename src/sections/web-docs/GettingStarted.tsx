@@ -46,7 +46,7 @@ export function GettingStarted() {
             encrypted (AES-256-GCM) before being stored — they're never
             visible after saving.
           </p>
-          <div className="rounded-lg border border-[var(--line)] p-3">
+          <div className="rounded-md border border-[var(--line)] p-3">
             <table className="w-full text-xs">
               <thead>
                 <tr className="border-b border-[var(--line)]">

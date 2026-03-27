@@ -6,10 +6,10 @@ export function SessionFlow() {
       <h3 className="mb-5 text-xl font-bold text-[var(--sea-ink)]">
         Running a Session
       </h3>
-      <div className="card rounded-2xl p-6">
+      <div className="card rounded-md p-6">
         <div className="space-y-4 text-sm text-[var(--sea-ink-soft)]">
           <div className="flex items-start gap-3">
-            <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[var(--foam)] text-xs font-bold text-[var(--lagoon)]">
+            <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-[var(--foam)] text-xs font-bold text-[var(--lagoon)]">
               1
             </div>
             <p>
@@ -25,7 +25,7 @@ export function SessionFlow() {
             <ArrowRight size={16} className="text-[var(--shore-line)]" />
           </div>
           <div className="flex items-start gap-3">
-            <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[var(--foam)] text-xs font-bold text-[var(--lagoon)]">
+            <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-[var(--foam)] text-xs font-bold text-[var(--lagoon)]">
               2
             </div>
             <p>
@@ -44,7 +44,7 @@ export function SessionFlow() {
             <ArrowRight size={16} className="text-[var(--shore-line)]" />
           </div>
           <div className="flex items-start gap-3">
-            <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[var(--foam)] text-xs font-bold text-[var(--lagoon)]">
+            <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-[var(--foam)] text-xs font-bold text-[var(--lagoon)]">
               3
             </div>
             <p>
@@ -59,7 +59,7 @@ export function SessionFlow() {
             <ArrowRight size={16} className="text-[var(--shore-line)]" />
           </div>
           <div className="flex items-start gap-3">
-            <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[var(--foam)] text-xs font-bold text-[var(--lagoon)]">
+            <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-[var(--foam)] text-xs font-bold text-[var(--lagoon)]">
               4
             </div>
             <p>
@@ -76,7 +76,7 @@ export function SessionFlow() {
             <ArrowRight size={16} className="text-[var(--shore-line)]" />
           </div>
           <div className="flex items-start gap-3">
-            <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[var(--foam)] text-xs font-bold text-[var(--lagoon)]">
+            <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-[var(--foam)] text-xs font-bold text-[var(--lagoon)]">
               5
             </div>
             <p>
@@ -94,7 +94,7 @@ export function SessionFlow() {
             <ArrowRight size={16} className="text-[var(--shore-line)]" />
           </div>
           <div className="flex items-start gap-3">
-            <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[var(--foam)] text-xs font-bold text-[var(--lagoon)]">
+            <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-[var(--foam)] text-xs font-bold text-[var(--lagoon)]">
               6
             </div>
             <p>

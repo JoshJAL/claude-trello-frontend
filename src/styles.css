@@ -1,78 +1,79 @@
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800&display=swap");
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Verdana", "Geneva", sans-serif;
+  --font-heading: "Lexend", ui-sans-serif, system-ui, sans-serif;
 }
 
 /* ── Light mode ──────────────────────────────────────────────────── */
 :root {
-  --sea-ink: #141e1f;
-  --sea-ink-soft: #3c595d;
-  --lagoon: #50767c;
-  --lagoon-deep: #3c595d;
-  --lagoon-light: #63949c;
-  --sand: #eff4f5;
-  --foam: #e0eaeb;
-  --shore-line: #c1d4d7;
+  --sea-ink: #181b18;
+  --sea-ink-soft: #606d5f;
+  --lagoon: #0d7377;
+  --lagoon-deep: #0a5c5f;
+  --lagoon-light: #14968b;
+  --sand: #f1f3f1;
+  --foam: #e4e7e4;
+  --shore-line: #c9d0c8;
   --surface: rgba(255, 255, 255, 0.74);
   --surface-strong: rgba(255, 255, 255, 0.9);
-  --line: rgba(20, 30, 31, 0.14);
+  --line: rgba(24, 27, 24, 0.14);
   --inset-glint: rgba(255, 255, 255, 0.82);
-  --kicker: #50767c;
-  --header-bg: rgba(239, 244, 245, 0.86);
+  --kicker: #0d7377;
+  --header-bg: rgba(241, 243, 241, 0.86);
   --chip-bg: rgba(255, 255, 255, 0.8);
-  --chip-line: rgba(80, 118, 124, 0.2);
-  --code-bg: #141e1f;
-  --code-text: #e0eaeb;
+  --chip-line: rgba(13, 115, 119, 0.2);
+  --code-bg: #181b18;
+  --code-text: #e4e7e4;
   --card-bg: rgba(255, 255, 255, 0.7);
 }
 
 /* ── Dark mode (explicit) ────────────────────────────────────────── */
 :root[data-theme="dark"] {
-  --sea-ink: #e0eaeb;
-  --sea-ink-soft: #a2bfc3;
-  --lagoon: #83a9af;
-  --lagoon-deep: #a2bfc3;
-  --lagoon-light: #93b9bf;
-  --sand: #0e1516;
-  --foam: #141e1f;
-  --shore-line: #283b3e;
-  --surface: rgba(14, 21, 22, 0.8);
-  --surface-strong: rgba(14, 21, 22, 0.92);
-  --line: rgba(162, 191, 195, 0.16);
-  --inset-glint: rgba(162, 191, 195, 0.1);
-  --kicker: #83a9af;
-  --header-bg: rgba(14, 21, 22, 0.86);
-  --chip-bg: rgba(20, 30, 31, 0.9);
-  --chip-line: rgba(131, 169, 175, 0.2);
-  --code-bg: #0a1011;
-  --code-text: #c1d4d7;
-  --card-bg: rgba(20, 30, 31, 0.6);
+  --sea-ink: #e4e7e4;
+  --sea-ink-soft: #aeb8ad;
+  --lagoon: #2dd4bf;
+  --lagoon-deep: #5eead4;
+  --lagoon-light: #3ee8d1;
+  --sand: #111311;
+  --foam: #181b18;
+  --shore-line: #30372f;
+  --surface: rgba(17, 19, 17, 0.8);
+  --surface-strong: rgba(17, 19, 17, 0.92);
+  --line: rgba(174, 184, 173, 0.16);
+  --inset-glint: rgba(174, 184, 173, 0.1);
+  --kicker: #2dd4bf;
+  --header-bg: rgba(17, 19, 17, 0.86);
+  --chip-bg: rgba(24, 27, 24, 0.9);
+  --chip-line: rgba(45, 212, 191, 0.2);
+  --code-bg: #0d100d;
+  --code-text: #c9d0c8;
+  --card-bg: rgba(24, 27, 24, 0.6);
 }
 
 /* ── Dark mode (system preference) ───────────────────────────────── */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --sea-ink: #e0eaeb;
-    --sea-ink-soft: #a2bfc3;
-    --lagoon: #83a9af;
-    --lagoon-deep: #a2bfc3;
-    --lagoon-light: #93b9bf;
-    --sand: #0e1516;
-    --foam: #141e1f;
-    --shore-line: #283b3e;
-    --surface: rgba(14, 21, 22, 0.8);
-    --surface-strong: rgba(14, 21, 22, 0.92);
-    --line: rgba(162, 191, 195, 0.16);
-    --inset-glint: rgba(162, 191, 195, 0.1);
-    --kicker: #83a9af;
-    --header-bg: rgba(14, 21, 22, 0.86);
-    --chip-bg: rgba(20, 30, 31, 0.9);
-    --chip-line: rgba(131, 169, 175, 0.2);
-    --code-bg: #0a1011;
-    --code-text: #c1d4d7;
-    --card-bg: rgba(20, 30, 31, 0.6);
+    --sea-ink: #e4e7e4;
+    --sea-ink-soft: #aeb8ad;
+    --lagoon: #2dd4bf;
+    --lagoon-deep: #5eead4;
+    --lagoon-light: #3ee8d1;
+    --sand: #111311;
+    --foam: #181b18;
+    --shore-line: #30372f;
+    --surface: rgba(17, 19, 17, 0.8);
+    --surface-strong: rgba(17, 19, 17, 0.92);
+    --line: rgba(174, 184, 173, 0.16);
+    --inset-glint: rgba(174, 184, 173, 0.1);
+    --kicker: #2dd4bf;
+    --header-bg: rgba(17, 19, 17, 0.86);
+    --chip-bg: rgba(24, 27, 24, 0.9);
+    --chip-line: rgba(45, 212, 191, 0.2);
+    --code-bg: #0d100d;
+    --code-text: #c9d0c8;
+    --card-bg: rgba(24, 27, 24, 0.6);
   }
 }
 
@@ -90,19 +91,31 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
 ::selection {
-  background: rgba(80, 118, 124, 0.2);
+  background: rgba(13, 115, 119, 0.2);
 }
 
 /* ── Cards ────────────────────────────────────────────────────────── */
 .card {
   border: 1px solid var(--line);
-  background: linear-gradient(165deg, var(--surface-strong), var(--surface));
-  box-shadow:
-    0 1px 0 var(--inset-glint) inset,
-    0 22px 44px rgba(14, 21, 22, 0.07),
-    0 6px 18px rgba(14, 21, 22, 0.05);
-  backdrop-filter: blur(4px);
+  border-top: 3px solid var(--lagoon);
+  background: var(--surface-strong);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+.card-flat {
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--lagoon);
+  background: var(--surface-strong);
+}
+
+.card-subtle {
+  border: 1px solid var(--line);
+  background: var(--surface-strong);
 }
 
 /* ── Transitions ──────────────────────────────────────────────────── */

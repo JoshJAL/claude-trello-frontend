@@ -43,10 +43,10 @@ export function HowItWorks() {
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
           {steps.map((step, i) => (
             <div key={step.title} className="text-center">
-              <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-[var(--lagoon)]/10 text-[var(--lagoon)]">
+              <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-md border border-[var(--lagoon)]/20 bg-[var(--lagoon)]/8 text-[var(--lagoon)]">
                 <step.icon size={26} />
               </div>
-              <div className="mb-2 text-xs font-bold text-[var(--kicker)]">
+              <div className="mb-2 inline-block border-b-2 border-[var(--lagoon)] pb-0.5 text-xs font-bold text-[var(--kicker)]">
                 Step {i + 1}
               </div>
               <h3 className="mb-3 text-lg font-bold text-[var(--sea-ink)]">

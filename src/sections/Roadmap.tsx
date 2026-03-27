@@ -174,9 +174,9 @@ function StatusBadge({ status }: { status: Status }) {
   const Icon = config.icon;
   return (
     <span
-      className={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-xs font-medium ${config.color} ${config.bg}`}
+      className={`inline-flex items-center gap-1.5 rounded-sm px-2 py-0.5 text-xs font-semibold uppercase tracking-wide ${config.color} ${config.bg}`}
     >
-      <Icon size={12} />
+      <span className={`inline-block h-1.5 w-1.5 rounded-sm ${config.color.replace("text-", "bg-")}`} />
       {config.label}
     </span>
   );
@@ -213,7 +213,7 @@ export function Roadmap() {
         </div>
 
         {/* Progress bar */}
-        <div className="card mb-10 rounded-2xl p-6">
+        <div className="card mb-10 rounded-md p-6">
           <div className="mb-3 flex items-baseline justify-between">
             <span className="text-sm font-semibold text-[var(--sea-ink)]">
               Overall progress
@@ -222,23 +222,23 @@ export function Roadmap() {
               {done}/{total} complete
             </span>
           </div>
-          <div className="h-3 overflow-hidden rounded-full bg-[var(--foam)]">
+          <div className="h-2.5 overflow-hidden rounded-sm bg-[var(--foam)]">
             <div
-              className="h-full rounded-full bg-[var(--lagoon)] transition-all duration-500"
+              className="h-full rounded-sm bg-[var(--lagoon)] transition-all duration-500"
               style={{ width: `${percent}%` }}
             />
           </div>
           <div className="mt-3 flex gap-4 text-xs text-[var(--sea-ink-soft)]">
             <span className="flex items-center gap-1">
-              <span className="inline-block h-2 w-2 rounded-full bg-green-500" />
+              <span className="inline-block h-2 w-2 rounded-sm bg-green-500" />
               {done} done
             </span>
             <span className="flex items-center gap-1">
-              <span className="inline-block h-2 w-2 rounded-full bg-amber-500" />
+              <span className="inline-block h-2 w-2 rounded-sm bg-amber-500" />
               {inProgress} in progress
             </span>
             <span className="flex items-center gap-1">
-              <span className="inline-block h-2 w-2 rounded-full bg-[var(--shore-line)]" />
+              <span className="inline-block h-2 w-2 rounded-sm bg-[var(--shore-line)]" />
               {planned} planned
             </span>
           </div>
@@ -254,7 +254,7 @@ export function Roadmap() {
               {category.items.map((item) => (
                 <div
                   key={item.title}
-                  className="card flex items-start gap-4 rounded-xl p-4"
+                  className="card-flat flex items-start gap-4 rounded-sm p-4"
                 >
                   <div className="flex-1">
                     <div className="flex flex-wrap items-center gap-2">
@@ -273,7 +273,7 @@ export function Roadmap() {
           </div>
         ))}
 
-        <div className="card rounded-2xl p-6 text-center">
+        <div className="card-subtle rounded-md p-6 text-center">
           <p className="text-sm text-[var(--sea-ink-soft)]">
             Have a feature request?{" "}
             <a

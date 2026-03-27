@@ -4,7 +4,7 @@ export function ParallelModeSection() {
       <h3 className="mb-5 text-xl font-bold text-[var(--sea-ink)]">
         Parallel Mode
       </h3>
-      <div className="card rounded-2xl p-6">
+      <div className="card rounded-md p-6">
         <div className="space-y-3 text-sm text-[var(--sea-ink-soft)]">
           <p>
             Parallel mode launches{" "}
@@ -14,7 +14,7 @@ export function ParallelModeSection() {
             , each in an isolated git worktree. This lets multiple tasks be
             worked on simultaneously without conflicts.
           </p>
-          <div className="rounded-lg border border-[var(--line)] p-3">
+          <div className="rounded-md border border-[var(--line)] p-3">
             <table className="w-full text-xs">
               <thead>
                 <tr className="border-b border-[var(--line)]">

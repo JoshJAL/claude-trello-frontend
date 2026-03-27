@@ -40,7 +40,7 @@ export function DataPolicyPage() {
               <h2 className="mb-3 text-xl font-bold text-[var(--sea-ink)]">
                 What We Use
               </h2>
-              <div className="overflow-x-auto rounded-xl border border-[var(--line)]">
+              <div className="overflow-x-auto rounded-md border border-[var(--line)]">
                 <table className="w-full text-left text-sm">
                   <thead>
                     <tr className="border-b border-[var(--line)] bg-[var(--foam)]/50">

@@ -5,7 +5,7 @@ export function TroubleshootingSection() {
         Troubleshooting
       </h3>
       <div className="space-y-3">
-        <details className="card rounded-xl">
+        <details className="card-subtle rounded-md">
           <summary className="cursor-pointer px-5 py-4 text-sm font-semibold text-[var(--sea-ink)]">
             I connected a source but no boards or repos appear
           </summary>
@@ -17,7 +17,7 @@ export function TroubleshootingSection() {
           </div>
         </details>
 
-        <details className="card rounded-xl">
+        <details className="card-subtle rounded-md">
           <summary className="cursor-pointer px-5 py-4 text-sm font-semibold text-[var(--sea-ink)]">
             The session started but nothing is happening
           </summary>
@@ -33,7 +33,7 @@ export function TroubleshootingSection() {
           </div>
         </details>
 
-        <details className="card rounded-xl">
+        <details className="card-subtle rounded-md">
           <summary className="cursor-pointer px-5 py-4 text-sm font-semibold text-[var(--sea-ink)]">
             Can I run multiple sessions at the same time?
           </summary>
@@ -45,7 +45,7 @@ export function TroubleshootingSection() {
           </div>
         </details>
 
-        <details className="card rounded-xl">
+        <details className="card-subtle rounded-md">
           <summary className="cursor-pointer px-5 py-4 text-sm font-semibold text-[var(--sea-ink)]">
             Parallel mode has merge conflicts
           </summary>
@@ -57,7 +57,7 @@ export function TroubleshootingSection() {
           </div>
         </details>
 
-        <details className="card rounded-xl">
+        <details className="card-subtle rounded-md">
           <summary className="cursor-pointer px-5 py-4 text-sm font-semibold text-[var(--sea-ink)]">
             The provider dropdown only shows Claude
           </summary>
@@ -69,7 +69,7 @@ export function TroubleshootingSection() {
           </div>
         </details>
 
-        <details className="card rounded-xl">
+        <details className="card-subtle rounded-md">
           <summary className="cursor-pointer px-5 py-4 text-sm font-semibold text-[var(--sea-ink)]">
             Where is my data stored?
           </summary>

@@ -66,9 +66,9 @@ export function Features() {
           {features.map((feature) => (
             <div
               key={feature.title}
-              className="card rounded-2xl p-6 transition hover:shadow-lg"
+              className="card rounded-md p-6 transition hover:shadow-md"
             >
-              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-[var(--lagoon)]/10 text-[var(--lagoon)]">
+              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-md border border-[var(--lagoon)]/20 bg-[var(--lagoon)]/8 text-[var(--lagoon)]">
                 <feature.icon size={20} />
               </div>
               <h3 className="mb-2 text-base font-bold text-[var(--sea-ink)]">

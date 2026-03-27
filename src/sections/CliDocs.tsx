@@ -34,7 +34,7 @@ function Code({
 
   return (
     <div className="group relative">
-      <pre className="overflow-x-auto rounded-xl border border-[var(--line)] bg-[var(--code-bg)] p-5 text-sm leading-relaxed text-[var(--code-text)]">
+      <pre className="overflow-x-auto rounded-md border border-[var(--line)] bg-[var(--code-bg)] p-5 text-sm leading-relaxed text-[var(--code-text)]">
         <code>{children}</code>
       </pre>
       {text && <CopyButton text={text} />}
@@ -52,7 +52,7 @@ function CommandCard({
   flags?: Array<{ flag: string; desc: string }>;
 }) {
   return (
-    <div className="card rounded-xl p-5">
+    <div className="card rounded-md p-5">
       <div className="flex flex-wrap items-baseline gap-3">
         <code className="rounded-md bg-[var(--code-bg)] px-2.5 py-1 text-sm font-semibold text-[var(--code-text)]">
           {command}
@@ -97,7 +97,7 @@ export function CliDocs() {
             href="https://www.npmjs.com/package/@joshjal/taskpilot"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-5 inline-flex items-center gap-1.5 rounded-lg border border-[var(--line)] bg-[var(--surface)] px-4 py-2 text-sm font-semibold text-[var(--sea-ink)] no-underline hover:bg-[var(--foam)]"
+            className="mt-5 inline-flex items-center gap-1.5 rounded-md border border-[var(--line)] bg-[var(--surface)] px-4 py-2 text-sm font-semibold text-[var(--sea-ink)] no-underline hover:bg-[var(--foam)]"
           >
             View on npm
             <ExternalLink size={14} />

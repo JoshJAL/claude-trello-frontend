@@ -36,7 +36,7 @@ export function OtherToolsPage() {
 
           <div className="space-y-6">
             {tools.map((tool) => (
-              <div key={tool.name} className="card rounded-2xl p-6 space-y-3">
+              <div key={tool.name} className="card rounded-md p-6 space-y-3">
                 <h2 className="text-xl font-bold text-[var(--sea-ink)]">
                   {tool.name}
                 </h2>
@@ -48,7 +48,7 @@ export function OtherToolsPage() {
                     href={tool.appUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 rounded-lg bg-[var(--lagoon)] px-4 py-2 text-sm font-semibold text-white no-underline hover:opacity-90"
+                    className="inline-flex items-center gap-1.5 rounded-md bg-[var(--lagoon)] px-4 py-2 text-sm font-semibold text-white no-underline hover:opacity-90"
                   >
                     Open App
                     <ExternalLink size={14} />
@@ -57,7 +57,7 @@ export function OtherToolsPage() {
                     href={tool.docsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 rounded-lg border border-[var(--line)] bg-[var(--chip-bg)] px-4 py-2 text-sm font-semibold text-[var(--sea-ink)] no-underline hover:bg-[var(--foam)]"
+                    className="inline-flex items-center gap-1.5 rounded-md border border-[var(--line)] bg-[var(--chip-bg)] px-4 py-2 text-sm font-semibold text-[var(--sea-ink)] no-underline hover:bg-[var(--foam)]"
                   >
                     Documentation
                     <ExternalLink size={14} />

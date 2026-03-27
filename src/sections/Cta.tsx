@@ -16,12 +16,12 @@ export function Cta() {
             href="https://account.task-pilot.dev/register"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-xl bg-[var(--lagoon)] px-6 py-3 text-base font-semibold text-white no-underline shadow-lg shadow-[var(--lagoon)]/20 hover:opacity-90"
+            className="inline-flex items-center gap-2 rounded-md bg-[var(--lagoon)] px-6 py-3 text-base font-semibold text-white no-underline shadow-lg shadow-[var(--lagoon)]/20 hover:opacity-90"
           >
             Sign Up
             <ArrowRight size={18} />
           </a>
-          <div className="rounded-xl border border-[var(--line)] bg-[var(--surface)] px-6 py-3">
+          <div className="rounded-md border border-[var(--line)] bg-[var(--surface)] px-6 py-3">
             <code className="text-sm font-semibold text-[var(--sea-ink)]">
               npx @joshjal/taskpilot register
             </code>

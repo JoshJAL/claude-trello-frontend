@@ -56,7 +56,7 @@ export function Nav() {
             href="https://account.task-pilot.dev"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-lg bg-[var(--lagoon)] px-4 py-2 text-sm font-semibold text-white no-underline hover:opacity-90"
+            className="rounded-md bg-[var(--lagoon)] px-4 py-2 text-sm font-semibold text-white no-underline hover:opacity-90"
           >
             Open App
           </a>
@@ -68,13 +68,13 @@ export function Nav() {
               onClick={() => setOpen((v) => !v)}
               aria-label={open ? "Close menu" : "Open menu"}
               aria-expanded={open}
-              className="rounded-lg border border-[var(--chip-line)] bg-[var(--chip-bg)] p-2 text-[var(--sea-ink)] transition hover:-translate-y-0.5"
+              className="rounded-md border border-[var(--chip-line)] bg-[var(--chip-bg)] p-2 text-[var(--sea-ink)] transition hover:-translate-y-0.5"
             >
               {open ? <X size={20} /> : <Menu size={20} />}
             </button>
 
             {open && (
-              <div className="absolute right-0 top-full mt-2 min-w-[180px] rounded-xl border border-[var(--line)] bg-[var(--header-bg)] py-2 shadow-lg backdrop-blur-xl">
+              <div className="absolute right-0 top-full mt-2 min-w-[180px] rounded-md border border-[var(--line)] bg-[var(--header-bg)] py-2 shadow-lg backdrop-blur-xl">
                 {navLinks.map(({ href, label }) => (
                   <a
                     key={href}

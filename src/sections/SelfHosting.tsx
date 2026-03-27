@@ -36,7 +36,7 @@ function Code({ children, copyText }: { children: React.ReactNode; copyText?: st
   const text = copyText ?? (typeof children === "string" ? children : "");
   return (
     <div className="group relative">
-      <pre className="overflow-x-auto rounded-xl border border-[var(--line)] bg-[var(--code-bg)] p-5 text-sm leading-relaxed text-[var(--code-text)]">
+      <pre className="overflow-x-auto rounded-md border border-[var(--line)] bg-[var(--code-bg)] p-5 text-sm leading-relaxed text-[var(--code-text)]">
         <code>{children}</code>
       </pre>
       {text && <CopyButton text={text} />}
@@ -56,9 +56,9 @@ function Step({
   children: React.ReactNode;
 }) {
   return (
-    <div className="card rounded-xl p-6">
+    <div className="card rounded-md p-6">
       <div className="mb-4 flex items-center gap-3">
-        <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[var(--lagoon)]/15 text-sm font-bold text-[var(--lagoon)]">
+        <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-[var(--lagoon)]/15 text-sm font-bold text-[var(--lagoon)]">
           {number}
         </span>
         <Icon size={18} className="text-[var(--lagoon)]" />
@@ -102,7 +102,7 @@ export function SelfHosting() {
               href="https://github.com/JoshJAL/claude-trello"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 rounded-lg bg-[#24292f] px-4 py-2.5 text-sm font-semibold text-white no-underline transition hover:bg-[#1b1f23] dark:bg-[#f0f6fc] dark:text-[#24292f] dark:hover:bg-[#d0d7de]"
+              className="inline-flex items-center gap-1.5 rounded-md bg-[#24292f] px-4 py-2.5 text-sm font-semibold text-white no-underline transition hover:bg-[#1b1f23] dark:bg-[#f0f6fc] dark:text-[#24292f] dark:hover:bg-[#d0d7de]"
             >
               <Github size={16} />
               View on GitHub
@@ -112,7 +112,7 @@ export function SelfHosting() {
               href="https://account.task-pilot.dev/docs/self-hosting"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 rounded-lg border border-[var(--line)] bg-[var(--surface)] px-4 py-2.5 text-sm font-semibold text-[var(--sea-ink)] no-underline hover:bg-[var(--foam)]"
+              className="inline-flex items-center gap-1.5 rounded-md border border-[var(--line)] bg-[var(--surface)] px-4 py-2.5 text-sm font-semibold text-[var(--sea-ink)] no-underline hover:bg-[var(--foam)]"
             >
               <Globe size={14} />
               Full Guide in App
@@ -121,7 +121,7 @@ export function SelfHosting() {
         </div>
 
         {/* Prerequisites */}
-        <div className="mb-8 card rounded-xl p-6">
+        <div className="mb-8 card rounded-md p-6">
           <h3 className="mb-3 flex items-center gap-2 text-lg font-semibold text-[var(--sea-ink)]">
             <Terminal size={18} className="text-[var(--lagoon)]" />
             Prerequisites
@@ -164,7 +164,7 @@ turso db tokens create taskpilot   # → TURSO_AUTH_TOKEN`}
               <code className="rounded bg-[var(--code-bg)] px-1.5 py-0.5 text-[var(--code-text)]">openssl rand -hex 32</code>.
             </p>
 
-            <div className="overflow-x-auto rounded-lg border border-[var(--line)]">
+            <div className="overflow-x-auto rounded-md border border-[var(--line)]">
               <table className="w-full text-left">
                 <thead>
                   <tr className="border-b border-[var(--line)] bg-[var(--foam)]/50">
@@ -209,7 +209,7 @@ node .output/server/index.mjs`}
         </div>
 
         {/* Security callout */}
-        <div className="mt-8 card rounded-xl p-6">
+        <div className="mt-8 card rounded-md p-6">
           <h3 className="mb-3 flex items-center gap-2 text-lg font-semibold text-[var(--sea-ink)]">
             <Shield size={18} className="text-[var(--lagoon)]" />
             Security

@@ -7,7 +7,7 @@ export function TaskFormatSection() {
         Task Format by Source
       </h3>
       <div className="space-y-4">
-        <div className="card rounded-xl p-5">
+        <div className="card rounded-md p-5">
           <h4 className="mb-2 flex items-center gap-2 text-sm font-semibold text-[var(--sea-ink)]">
             <Trello size={16} className="text-[var(--lagoon)]" />
             Trello
@@ -17,7 +17,7 @@ export function TaskFormatSection() {
             agent. Structure your board with lists like "To Do", "In
             Progress", and "Done".
           </p>
-          <pre className="overflow-x-auto rounded-xl border border-[var(--line)] bg-[var(--code-bg)] p-5 text-sm leading-relaxed text-[var(--code-text)]">
+          <pre className="overflow-x-auto rounded-md border border-[var(--line)] bg-[var(--code-bg)] p-5 text-sm leading-relaxed text-[var(--code-text)]">
             <code>{`Board: My Project
 ├── To Do
 │   ├── Card: Fix auth bug
@@ -34,7 +34,7 @@ export function TaskFormatSection() {
           </pre>
         </div>
 
-        <div className="card rounded-xl p-5">
+        <div className="card rounded-md p-5">
           <h4 className="mb-2 flex items-center gap-2 text-sm font-semibold text-[var(--sea-ink)]">
             <Github size={16} className="text-[var(--lagoon)]" />
             GitHub /{" "}
@@ -45,7 +45,7 @@ export function TaskFormatSection() {
             Issues with markdown task lists. Write task lists in the issue body
             and the agent will check them off as it works.
           </p>
-          <pre className="overflow-x-auto rounded-xl border border-[var(--line)] bg-[var(--code-bg)] p-5 text-sm leading-relaxed text-[var(--code-text)]">
+          <pre className="overflow-x-auto rounded-md border border-[var(--line)] bg-[var(--code-bg)] p-5 text-sm leading-relaxed text-[var(--code-text)]">
             <code>{`Issue #42: Fix authentication bug
 
 Description:

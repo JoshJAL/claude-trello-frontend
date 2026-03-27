@@ -4,7 +4,7 @@ export function SettingsSection() {
       <h3 className="mb-5 text-xl font-bold text-[var(--sea-ink)]">
         Settings
       </h3>
-      <div className="card rounded-2xl p-6">
+      <div className="card rounded-md p-6">
         <div className="space-y-4 text-sm text-[var(--sea-ink-soft)]">
           <p>
             The <strong className="text-[var(--sea-ink)]">Settings</strong> page

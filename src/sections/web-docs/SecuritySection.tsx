@@ -6,7 +6,7 @@ export function SecuritySection() {
       <h3 className="mb-5 text-xl font-bold text-[var(--sea-ink)]">
         Security
       </h3>
-      <div className="card rounded-2xl p-6">
+      <div className="card rounded-md p-6">
         <ul className="space-y-3 text-sm text-[var(--sea-ink-soft)]">
           <li className="flex items-start gap-2">
             <CheckCircle2

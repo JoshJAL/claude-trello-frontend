@@ -34,7 +34,7 @@ export function AiModelsPage() {
                 Claude models excel at coding, analysis, and following complex instructions.
                 Default to Sonnet 4.6 for 80%+ of tasks — it offers the best quality-to-cost ratio.
               </p>
-              <div className="card overflow-x-auto rounded-2xl">
+              <div className="card overflow-x-auto rounded-md">
                 <table className="w-full text-left text-sm">
                   <thead>
                     <tr className="border-b border-[var(--line)] text-xs font-semibold text-[var(--sea-ink-soft)]">
@@ -79,7 +79,7 @@ export function AiModelsPage() {
                 OpenAI's GPT-5.4 family delivers strong reasoning and coding performance.
                 GPT-5.4 Mini is the recommended default — it approaches full GPT-5.4 quality at a fraction of the cost.
               </p>
-              <div className="card overflow-x-auto rounded-2xl">
+              <div className="card overflow-x-auto rounded-md">
                 <table className="w-full text-left text-sm">
                   <thead>
                     <tr className="border-b border-[var(--line)] text-xs font-semibold text-[var(--sea-ink-soft)]">
@@ -124,7 +124,7 @@ export function AiModelsPage() {
                 All Groq models run on Groq's custom LPU hardware for extremely fast inference.
                 Choose Groq when speed matters more than frontier intelligence.
               </p>
-              <div className="card overflow-x-auto rounded-2xl">
+              <div className="card overflow-x-auto rounded-md">
                 <table className="w-full text-left text-sm">
                   <thead>
                     <tr className="border-b border-[var(--line)] text-xs font-semibold text-[var(--sea-ink-soft)]">
@@ -183,7 +183,7 @@ export function AiModelsPage() {
               <h2 className="mb-3 text-xl font-bold text-[var(--sea-ink)]">
                 Choosing a Model
               </h2>
-              <div className="card space-y-3 rounded-2xl p-6">
+              <div className="card space-y-3 rounded-md p-6">
                 <p className="text-sm text-[var(--sea-ink-soft)]">
                   <span className="font-semibold text-[var(--sea-ink)]">Most tasks:</span>{" "}
                   Use <strong>Claude Sonnet 4.6</strong> — best quality-to-cost ratio for coding.

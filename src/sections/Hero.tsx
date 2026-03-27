@@ -38,7 +38,7 @@ export function Hero() {
   return (
     <section className="relative overflow-hidden px-6 pt-24 pb-20 sm:pt-36 sm:pb-32">
       <div className="mx-auto max-w-3xl text-center">
-        <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[var(--line)] bg-[var(--surface)] px-4 py-1.5 text-sm font-medium text-[var(--sea-ink-soft)]">
+        <div className="mb-6 inline-flex items-center gap-2 border-l-2 border-[var(--lagoon)] bg-[var(--surface-strong)] px-4 py-1.5 text-sm font-medium text-[var(--sea-ink-soft)]">
           <Monitor size={14} className="text-[var(--lagoon)]" />
           Desktop app now available
         </div>
@@ -59,21 +59,21 @@ export function Hero() {
             href="https://account.task-pilot.dev/register"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-xl bg-[var(--lagoon)] px-6 py-3 text-base font-semibold text-white no-underline shadow-lg shadow-[var(--lagoon)]/20 hover:opacity-90"
+            className="inline-flex items-center gap-2 rounded-md bg-[var(--lagoon)] px-6 py-3 text-base font-semibold text-white no-underline shadow-lg shadow-[var(--lagoon)]/20 hover:opacity-90"
           >
             Get Started
             <ArrowRight size={18} />
           </a>
           <a
             href={`${RELEASE_BASE}/${download.file}`}
-            className="inline-flex items-center gap-2 rounded-xl border border-[var(--line)] bg-[var(--surface)] px-6 py-3 text-base font-semibold text-[var(--sea-ink)] no-underline hover:bg-[var(--foam)]"
+            className="inline-flex items-center gap-2 rounded-md border border-[var(--line)] bg-[var(--surface)] px-6 py-3 text-base font-semibold text-[var(--sea-ink)] no-underline hover:bg-[var(--foam)]"
           >
             <DownloadIcon size={18} />
             {download.label}
           </a>
           <a
             href="#cli"
-            className="inline-flex items-center gap-2 rounded-xl border border-[var(--line)] bg-[var(--surface)] px-6 py-3 text-base font-semibold text-[var(--sea-ink)] no-underline hover:bg-[var(--foam)]"
+            className="inline-flex items-center gap-2 rounded-md border border-[var(--line)] bg-[var(--surface)] px-6 py-3 text-base font-semibold text-[var(--sea-ink)] no-underline hover:bg-[var(--foam)]"
           >
             Use the CLI
           </a>
@@ -101,11 +101,11 @@ export function Hero() {
         </div>
 
         {/* Terminal preview */}
-        <div className="mx-auto mt-20 max-w-2xl overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--code-bg)] shadow-2xl">
+        <div className="mx-auto mt-20 max-w-2xl overflow-hidden rounded-md border border-[var(--line)] bg-[var(--code-bg)] shadow-2xl">
           <div className="flex items-center gap-1.5 border-b border-white/10 px-4 py-3">
-            <span className="h-3 w-3 rounded-full bg-red-400/80" />
-            <span className="h-3 w-3 rounded-full bg-yellow-400/80" />
-            <span className="h-3 w-3 rounded-full bg-green-400/80" />
+            <span className="h-2.5 w-2.5 rounded-sm bg-red-400/80" />
+            <span className="h-2.5 w-2.5 rounded-sm bg-yellow-400/80" />
+            <span className="h-2.5 w-2.5 rounded-sm bg-green-400/80" />
             <span className="ml-3 text-xs text-[var(--code-text)]/40">
               terminal
             </span>
